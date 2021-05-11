@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
 using MeTracker.Models;
@@ -11,6 +12,13 @@ namespace MeTracker
     {
         private SQLiteAsyncConnection connection;
 
+        public async Task<List<Location>> GetAll()
+        {
+            await CreateConnection();
+
+            var locations = await connection.Table<Location>().ToListAsync();
+            return locations;
+        }
 
         public async Task Save(Location location)
         {

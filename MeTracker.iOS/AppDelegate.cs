@@ -24,6 +24,7 @@ namespace MeTracker.iOS
         {
             global::Xamarin.Forms.Forms.Init();
             global::Xamarin.FormsMaps.Init();
+            Bootstrapper.Init();
             LoadApplication(new App());
 
             return base.FinishedLaunching(app, options);

@@ -69,6 +69,8 @@
     <None Include="Info.plist" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\LocationTrackingService.cs" />
+    <Compile Include="Bootstrapper.cs" />
+    <Compile Include="Renderers\CustomMapRender.cs" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />
@@ -129,6 +131,9 @@
     <PackageReference Include="Xamarin.Forms.Maps">
       <Version>5.0.0.2012</Version>
     </PackageReference>
+    <PackageReference Include="Autofac">
+      <Version>6.2.0</Version>
+    </PackageReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>
@@ -139,5 +144,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Services\" />
+    <Folder Include="Renderers\" />
   </ItemGroup>
 </Project>
